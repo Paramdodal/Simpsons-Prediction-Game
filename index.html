@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Headline added here -->
+        <h1 class="game-title">Simpsons Prediction Game</h1>
+
+        <div class="game">
+            <div class="grid-circle">
+                <div id="green" class="cell"></div>
+                <div id="red" class="cell"></div>
+                <div id="yellow" class="cell"></div>
+                <div id="blue" class="cell"></div>
+            </div>
+            <div class="inner-circle">
+                <div id="turn">-</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="on" class="switch-label">Game On:</label>
+            <input type="checkbox" id="on" class="switch" />
+            <button id="start" class="button">Start Game</button>
+            <div id="gameOverMessage" class="message"></div>
+            <div id="maxScore" class="score">Highest Score: 0</div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

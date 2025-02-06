@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling for the headline */
+.game-title {
+    color: #FFEB3B;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #444;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.grid-circle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#green { background-color: #4CAF50; }
+#red { background-color: #f44336; }
+#yellow { background-color: #FFEB3B; }
+#blue { background-color: #2196F3; }
+
+.inner-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #555;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 10px solid #333;
+}
+
+#turn {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+button, .switch {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover, .switch:hover {
+    background-color: #666;
+}
+
+#gameOverMessage {
+    font-size: 20px;
+    color: red;
+    margin-top: 20px;
+}
+
+#maxScore {
+    font-size: 18px;
+    margin-top: 10px;
+    color: yellow;
+}
+
+@media (max-width: 600px) {
+    .game {
+        width: 350px;
+        height: 350px;
+    }
+    .grid-circle {
+        width: 280px;
+        height: 280px;
+    }
+    .inner-circle {
+        width: 180px;
+        height: 180px;
+    }
+}
