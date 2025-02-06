@@ -1,1 +1,1 @@
-# Simpsons-Prediction-Game
+Simon Predictor Game
